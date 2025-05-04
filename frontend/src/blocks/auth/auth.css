@@ -1,0 +1,11 @@
+.auth {
+  grid-area: auth;
+  width: 260px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .auth {
+    width: 358px;
+  }
+}

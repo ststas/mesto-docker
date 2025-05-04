@@ -1,0 +1,65 @@
+name: Deploy ststas.dev/mesto
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH key
+        run: |
+          echo "$SSH_PRIVATE_KEY" > aws_rsa.pem
+          chmod 600 aws_rsa.pem
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Debug private key
+        run: |
+          cat aws_rsa.pem | head -n 5
+          ls -l aws_rsa.pem
+
+      - name: Check SSH connection
+        run: |
+          ssh -i aws_rsa.pem -v -o StrictHostKeyChecking=no ubuntu@$AWS_LS_IP
+        env:
+          AWS_LS_IP: ${{ secrets.AWS_LS_IP }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to server
+        run: |
+          ssh -i aws_rsa.pem -o StrictHostKeyChecking=no ubuntu@$AWS_LS_IP "mkdir -p /home/ubuntu/mesto && chmod 777 /home/ubuntu/mesto"
+
+          rsync -avz --progress -e "ssh -i aws_rsa.pem -o StrictHostKeyChecking=no" ./ ubuntu@$AWS_LS_IP:/home/ubuntu/mesto
+
+          ssh -i aws_rsa.pem -o StrictHostKeyChecking=no ubuntu@$AWS_LS_IP << 'EOF'
+            if [ ! -f /swapfile ]; then
+              sudo fallocate -l 1G /swapfile
+              sudo chmod 600 /swapfile
+              sudo mkswap /swapfile
+              sudo swapon /swapfile
+              echo "/swapfile none swap sw 0 0" | sudo tee -a /etc/fstab
+            fi
+
+            cd /home/ubuntu/mesto
+
+            # Build frontend before Docker Compose
+            cd frontend
+            npm ci
+            npm run build
+            cd ..
+
+            docker system prune -af
+
+            docker-compose down
+            docker-compose up -d --build
+          EOF
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          AWS_LS_IP: ${{ secrets.AWS_LS_IP }}

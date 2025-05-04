@@ -1,0 +1,27 @@
+.header {
+  grid-area: header;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 320px;
+  height: 56px;
+  margin: 28px auto 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    width: 651px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    width: 880px;
+    height: 74px;
+    margin: 45px auto 0;
+  }
+}

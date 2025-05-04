@@ -1,0 +1,14 @@
+.profile {
+  grid-area: profile;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 42px 19px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .profile {
+    flex-direction: row;
+    margin: 40px auto 0;
+  }
+}

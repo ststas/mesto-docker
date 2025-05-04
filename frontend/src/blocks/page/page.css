@@ -1,0 +1,22 @@
+.page {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  background-color: #000000;
+  display: grid;
+  grid-template-areas:
+  "header"
+  "auth"
+  "profile"
+  "elements"
+  "footer";
+  justify-content: center;
+  align-content: start;
+  transition: 0.4s;
+}

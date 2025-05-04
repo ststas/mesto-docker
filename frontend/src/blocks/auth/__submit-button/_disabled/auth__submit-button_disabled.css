@@ -1,0 +1,7 @@
+.auth__submit-button_disabled {
+  background-color: white;
+  color: rgb(117, 117, 117);
+  opacity: 0.4;
+  pointer-events: none;
+  user-select: none;
+}

@@ -1,0 +1,80 @@
+/*VENDOR*/
+@import url(../vendor/normalize.css);
+/*PAGE & FONTS*/
+@import url(../blocks/page/page.css);
+@import url(../blocks/page/_clicked/page_clicked.css);
+
+@import url(../vendor/fonts/fonts.css);
+/*SPINNER*/
+@import url(../blocks/spinner/spinner.css);
+/*HEADER*/
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__nav/header__nav.css);
+@import url(../blocks/header/__nav-button-container/header__nav-button-container.css);
+@import url(../blocks/header/__nav-button/header__nav-button.css);
+@import url(../blocks/header/__nav-button/_clicked/header__nav-button_clicked.css);
+@import url(../blocks/header/__button-logout/header__button-logout.css);
+@import url(../blocks/header/__nav-email/header__nav-email.css);
+@import url(../blocks/header/__link/header__link.css);
+
+/*AUTH*/
+@import url(../blocks/auth/auth.css);
+@import url(../blocks/auth/__form/auth__form.css);
+@import url(../blocks/auth/__title/auth__title.css);
+@import url(../blocks/auth/__field/auth__field.css);
+@import url(../blocks/auth/__error/auth__error.css);
+@import url(../blocks/auth/__error/_visible/auth__error_visible.css);
+@import url(../blocks/auth/__submit-button/auth__submit-button.css);
+@import url(../blocks/auth/__submit-button/_disabled/auth__submit-button_disabled.css);
+@import url(../blocks/auth/__link/auth__link.css);
+
+
+
+/*PROFILE*/
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__avatar-block/profile__avatar-block.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/__occupation/profile__occupation.css);
+@import url(../blocks/profile/__edit-button/profile__edit-button.css);
+@import url(../blocks/profile/__add-button/profile__add-button.css);
+@import url(../blocks/profile/__name-and-edit/profile__name-and-edit.css);
+/*POP-UP*/
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/_type_picture/popup_type_picture.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__container/_type_picture/popup__container_type_picture.css);
+@import url(../blocks/popup/__figure/popup__figure.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__title/_type_info/popup__title_type_info.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__field/popup__field.css);
+@import url(../blocks/popup/__field/_type/popup__field_type_error.css);
+@import url(../blocks/popup/__field/_margin/popup__field_margin_top.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__image/_type_info/popup__image_type_info.css);
+@import url(../blocks/popup/__image-caption/popup__image-caption.css);
+@import url(../blocks/popup/__submit-button/popup__submit-button.css);
+@import url(../blocks/popup/__submit-button/_disabled/popup__submit-button_disabled.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__error/popup__error.css);
+@import url(../blocks/popup/__error/_visible/popup__error_visible.css);
+/*ELEMENTS & ELEMENT*/
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__image/element__image.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__caption/element__caption.css);
+@import url(../blocks/element/__heart-likes/element__heart-likes.css);
+@import url(../blocks/element/__heart-button/element__heart-button.css);
+@import url(../blocks/element/__likes-counter/element__likes.css);
+@import url(../blocks/element/__heart-button/_active/element__heart-button_active.css);
+@import url(../blocks/element/__delete-button/element__delete-button.css);
+@import url(../blocks/element/__delete-button/_disable/element__delete-button_disable.css);
+
+/*FOOTER*/
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);

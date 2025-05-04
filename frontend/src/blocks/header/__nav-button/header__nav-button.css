@@ -1,0 +1,27 @@
+.header__nav-button {
+  display: block;
+  border: none;
+  width: 24px;
+  height: 3px;
+  background: #FFF;
+  margin: auto;
+}
+.header__nav-button::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #FFF;
+  margin-top: 15px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.header__nav-button::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #FFF;
+  margin-top: -9px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}

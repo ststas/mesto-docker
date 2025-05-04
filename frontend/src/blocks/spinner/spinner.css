@@ -1,0 +1,10 @@
+.spinner {
+  margin: 23vh auto;
+  height: 150px;
+  width: 150px;
+  background-image: url(../../images/spinner-loading.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  align-self: center;
+} 
