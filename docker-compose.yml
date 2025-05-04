@@ -29,7 +29,7 @@ services:
     mem_limit: 128m
     memswap_limit: 150m
     ports:
-      - "27017:27017"
+      - "27018:27017"
 
   frontend:
     build: ./frontend
