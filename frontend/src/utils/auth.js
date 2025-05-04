@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseURL = 'http://localhost:4000/'
+const baseURL = 'https://ststas.dev/mesto/api'
 
 const axiosBase = axios.create({
   baseURL,
@@ -11,7 +11,7 @@ class Auth {
   // функция обработки ошибок  
   _processError(error) {
     if (error.response) {
-      return Promise.reject(new Error(`Статус: ${error.response.status}. Данные ${error.response.data}`))
+      return Promise.reject(new Error(`Status: ${error.response.status}. Data ${error.response.data}`))
     }
     if (error.request) {
       return Promise.reject(new Error(error.request))
