@@ -23,17 +23,17 @@ const userSchema = new mongoose.Schema({
     type: String,
     minlength: 2,
     maxlength: 30,
-    default: 'Жак-Ив Кусто',
+    default: 'Your name',
   },
   about: {
     type: String,
     minlength: 2,
     maxlength: 30,
-    default: 'Исследователь',
+    default: 'Your occupation',
   },
   avatar: {
     type: String,
-    default: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
+    default: 'https://www.hockney.com/img/gallery/digital/ipad/1219.jpg',
     validate: {
       validator(value) {
         return validator.isURL(value);
