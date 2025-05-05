@@ -34,6 +34,6 @@ app.use("/mesto/api", Router);
 app.use(errorLogger);
 app.use(errors());
 app.use(handleErrors);
-app.listen(PORT || 4000, () => {
+app.listen(PORT || 4001, () => {
   console.log(`Server running on port ${PORT}`);
 });

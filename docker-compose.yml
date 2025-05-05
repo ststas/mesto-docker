@@ -5,12 +5,12 @@ services:
     build: ./backend
     container_name: mesto-backend
     ports:
-      - "4000:4000"
+      - "4001:4001"
     volumes:
       - ./backend:/app
     environment:
       - NODE_ENV=production
-      - PORT=4000
+      - PORT=4001
       - MONGO_URI=mongodb://mongo:27017/mesto
     depends_on:
       - mongo
