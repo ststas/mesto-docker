@@ -12,7 +12,7 @@
 
 ## Stack & Tools
 
-- Node.js, Express, React.js, HTML, CSS, REST API, JWT.
+- Node.js, Express, React.js, HTML, CSS, REST API, JWT, Docker, GitHubActions
 
 ## My goal
 
@@ -29,7 +29,7 @@
 - download repository and install dependencies
 - to launch on local machine:
   - please reassgin PORT on backend to 3001 and turn off the CORS (see app.js)
-  - please reassign BASE_URL (auth.js) & apiUrl (api.js) on frontend as `http://127.0.0.1:3000`
+  - please reassign BASE_URL (auth.js) & apiUrl (api.js) on frontend as `http://127.0.0.1:3001`
 - to launch on a server, please use your own values for these variables
 - use `NPM START` to run frontend part
 - use `NPM START` to run backend part
@@ -37,11 +37,11 @@
 
 ## Frontend
 
-- https://ststas.nomoredomainsicu.ru/
+- https://ststas.dev/mesto
 
 ## Backend
 
-- https://api.ststas.nomoredomainsicu.ru/
+- https://ststas.dev/mesto/api
 
 ### Stanislav Zaitsev х Yandex Practicum
 
@@ -59,7 +59,7 @@
 
 ## Стек и инструменты
 
-- Node.js, Express, React.js, HTML, CSS, REST API, JWT.
+- Node.js, Express, React.js, HTML, CSS, REST API, JWT, Docker, GitHubActions
 
 ## Цель
 
@@ -76,7 +76,7 @@
 - скачайте репозиторий и установите зависимости
 - для запуска локально
   - назначьте на бэкенде PORT=3001 и отключите CORS (app.js)
-  - назначьте на фронте переменным BASE_URL (auth.js) и apiUrl (api.js) значение `http://127.0.0.1:3000`
+  - назначьте на фронте переменным BASE_URL (auth.js) и apiUrl (api.js) значение `http://127.0.0.1:3001`
 - для запуска на сервере используйте свои значения.
 - наберите `NPM START` для запуска фронтенда
 - наберите `NPM START` для запуска бэкенда
@@ -84,18 +84,11 @@
 
 ## Фронт
 
-- https://ststas.nomoredomainsicu.ru/
+- https://ststas.dev/mesto
 
 ## Бэк
 
-- https://api.ststas.nomoredomainsicu.ru/
+- https://ststas.dev/mesto/api
 
 ### Станислав Зайцев х Yandex Practicum
 
-IP 158.160.78.186
-
-Frontend https://ststas.nomoredomainsicu.ru/
-
-Backend https://api.ststas.nomoredomainsicu.ru/
-
-Test https://github.com/ststas/react-mesto-api-full-gha/actions/workflows/tests.yml
