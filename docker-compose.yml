@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   backend:
+    restart: unless-stopped
     build: ./backend
     container_name: mesto-backend
     ports:
@@ -20,6 +21,7 @@ services:
     memswap_limit: 250m
 
   mongo:
+    restart: unless-stopped
     image: mongo:6
     container_name: mesto-mongo
     volumes:
@@ -32,6 +34,7 @@ services:
       - "27018:27017"
 
   frontend:
+    restart: unless-stopped
     build: ./frontend
     container_name: mesto-frontend
     ports:
